@@ -1,43 +1,157 @@
-<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+<head>
+    <link href="%PUBLIC_URL%/img/favicon.ico" rel="icon" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, minimal-ui"
+          name="viewport">
+    <link href="%PUBLIC_URL%/css/mono.css" rel="stylesheet" type="text/css">
+    <script defer src="%PUBLIC_URL%/js/mono.js"></script>
+    <title>Lab1</title>
+</head>
+<body>
+<div id="background">
+    <div id="data">
+        <div id="main-frame">
+            <div id="info">
+                <img alt="monobank" id="logo" src="%PUBLIC_URL%/img/logo_short.svg">
+                <div id="banka">
+                    <img alt="" id="banka-bg" src="%PUBLIC_URL%/img/banka_bg.png">
+                    <img alt="Half full jar" id="banka-img" src="%PUBLIC_URL%/img/banka.png">
+                    <div id="scale">
+                        <img alt="" id="scale-img" src="/img/scale.png">
+                        <div class="scale-point" id="scale-point-top">2</div>
+                        <div class="scale-point" id="scale-point-middle">1</div>
+                        <div class="scale-point" id="scale-point-bottom">0</div>
+                    </div>
+                    <img alt="" id="avatar" src="%PUBLIC_URL%/img/ava.jpg">
+                </div>
+                <div id="creator">
+                    Павло О. created the jar
+                </div>
+                <div id="name">
+                    БАНКАБАНКАБАНКАБАНКА
+                </div>
+                <div id="stats">
+                    <div class="stats-elem">
+                        <img alt="" class="stats-icon" src="%PUBLIC_URL%/img/collected.svg">
+                        <div class="stats-data-text-container">
+                            <div class="stats-data-label">Accumulated</div>
+                            <div class="stats-data-value">1 ₴</div>
+                        </div>
+                    </div>
+                    <div class="stats-elem">
+                        <img alt="" class="stats-icon" src="%PUBLIC_URL%/img/target.svg">
+                        <div class="stats-data-text-container">
+                            <div class="stats-data-label">Goal</div>
+                            <div class="stats-data-value">2 ₴</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="pay">
+                <div id="gradient-box">
+                    <div id="top-up">
+                        Top up amount 💸
+                    </div>
+                    <div class="empty" id="money">
+                        <div contenteditable="true" id="money-input" inputmode="decimal">0</div>
+                        <div id="money-uah">&nbsp;₴</div>
+                    </div>
+                    <div class="subtitle hidden" id="money-error-msg">
+                        Minimum amount: 10 ₴. Maximum amount: 29 999 ₴
+                    </div>
+                    <div class="subtitle" id="fee">
+                        2% processing fee for non-Ukrainian cards
+                    </div>
+                    <div id="plus-buttons">
+                        <div class="plus-button" tabindex="0">
+                            <div class="title">+100&nbsp;₴</div>
+                            <div class="subtitle">+2.33&nbsp;€</div>
+                        </div>
+                        <div class="plus-button" tabindex="0">
+                            <div class="title">+500&nbsp;₴</div>
+                            <div class="subtitle">+11.67&nbsp;€</div>
+                        </div>
+                        <div class="plus-button" tabindex="0">
+                            <div class="title">+1&nbsp;000&nbsp;₴</div>
+                            <div class="subtitle">+23.34&nbsp;€</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <input autocomplete="off" class="field-input" id="comment-input" maxlength="60">
+                    <label for="comment-input" class="field-input-label">Name or comment (optional)</label>
+                </div>
+                <div class="pay-button">
+                    <img alt="mono Pay" id="mono-pay-logo" src="%PUBLIC_URL%/img/mono_pay.svg">
+                </div>
+                <div class="pay-button">
+                    <button aria-label="Google Pay" id="google-pay" type="button"></button>
+                </div>
+                <div class="" id="manual-trigger">
+                    <div id="line"></div>
+                    <div id="card-input">
+                        <img alt="card" id="card-icon" src="%PUBLIC_URL%/img/card.svg">
+                        <div id="show-manual">Enter card details</div>
+                    </div>
+                </div>
+                <div class="none" id="manual">
+                    <div id="card-line">
+                        <div class="small-line"></div>
+                        <div id="card-line-text">or enter card details</div>
+                        <div class="small-line"></div>
+                    </div>
+                    <div class="field">
+                        <input autocomplete="cc-number" class="field-input" id="cardNumber" inputmode="decimal" pattern="\d*" placeholder="" type="tel" maxlength="19">
+                        <label for="cardNumber" id="card-number-label" class="field-input-label">Card number</label>
+                        <span class="err" id="card-number-error">Invalid card number</span>
+                    </div>
+                    <div class="field" id="card-info">
+                        <div class="subfield">
+                            <input autocomplete="cc-exp-month" class="field-input" data-role="number" id="expiryM" inputmode="decimal" max="12" maxlength="2" type="tel">
+                            <label for="expiryM" id="month-label" class="field-input-label">Month</label>
+                            <span class="err">Invalid</span>
+                        </div>
+                        <span class="borderLine"></span>
+                        <div class="subfield">
+                            <input autocomplete="cc-exp-year" class="field-input" data-role="number" id="expiryY" inputmode="decimal" maxlength="4" type="tel">
+                            <label id="year-label" class="field-input-label" for="expiryY">Year</label>
+                            <span class="err">Invalid</span>
+                        </div>
+                        <span class="borderLine"></span>
+                        <div class="subfield">
+                            <input class="field-input" data-role="number" id="cvv" inputmode="decimal" maxlength="3" type="tel">
+                            <label id="cvv-label" for="cvv" class="field-input-label">CVC2</label>
+                            <span class="err">Invalid</span>
+                        </div>
+                    </div>
+                    <div class="field foreign-fees"></div>
+                    <div class="field" id="pay-button">
+                        <button disabled id="btn">
+                            <span id="x-top-up">Send to the Jar</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div id="copyright">
+                "JSC "UNIVERSAL BANK" License of the NBU №92 dated January 20, 1994,"
+                <br>
+                "Number in the State Register of Banks № 226"
+            </div>
+            <div id="footer-buttons" tabindex="0">
+                <div class="footer-button">
+                    <img alt="cup" src="%PUBLIC_URL%/img/cup.svg">
+                    <div class="footer-button-text">Run a raffle</div>
+                </div>
+                <div class="footer-button">
+                    <img alt="cup" src="%PUBLIC_URL%/img/gamepad.svg">
+                    <div class="footer-button-text">Streaming widget</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+</body>
 </html>

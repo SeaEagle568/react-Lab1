@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    height: 100%;
+}
+div {
+    font-family: "Inter", sans-serif;
+}
+#background {
+    background-image: linear-gradient(136.56deg, #8a53b6 0%, #cea2d0 97.42%);
+    min-height: 100vh;
+    padding-top: 64px;
+}
+#data {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 990px;
+}
+#main-frame {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 680px;
+    background: white;
+    border-radius: 24px;
+    margin: 16px auto 16px;
+    overflow: hidden;
+}
+#info {
+    width: 50%;
+    min-height: 100%;
+    background: #f3f4f6;
+    display: flex;
+    flex-direction: column;
+}
+#logo {
+    display: block;
+    margin: 42px auto 24px;
+}
+#banka {
+    position: relative;
+    margin: auto auto 20px;
+}
+#banka-bg {
+    width: 215px;
+    height: 215px;
+}
+#banka-img {
+    display: block;
+    position: absolute;
+    top: 3%;
+    left: 15%;
+    width: 155px;
+    height: 203px;
+}
+#scale {
+    position: absolute;
+    top: 15%;
+    left: 22%;
+}
+#scale-img {
+    width: 42px;
+    height: 168px;
+}
+.scale-point {
+    font-weight: 800;
+    font-size: 10px;
+    color: #8e5b5b;
+    position: absolute;
+    white-space: nowrap;
+}
+#scale-point-top {
+    top: 2%;
+    left: 35%;
+}
+#scale-point-middle {
+    top: 45%;
+    left: 10%;
+}
+#scale-point-bottom {
+    top: 90%;
+    left: 10%;
+}
+#avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 32px;
+    position: absolute;
+    top: 69%;
+    left: 60%;
+}
+#creator {
+    margin: 0 auto;
+    width: fit-content;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000;
+    text-align: center;
+}
+#name {
+    margin: 4px auto 0;
+    width: fit-content;
+    font-size: 22px;
+    font-weight: 900;
+    color: #000;
+    text-align: center;
+}
+#stats {
+    display: flex;
+    background: white;
+    justify-content: center;
+    margin: 20px auto auto;
+    border-radius: 16px;
+}
+
+.stats-elem:first-child {
+    border-right: solid #ccc 0.5px;
+}
+.stats-elem {
+    display: flex;
+    padding: 0 20px;
+    margin: 12px 0;
+    align-items: center;
+}
+.stats-data-text-container {
+    display: flex;
+    flex-direction: column;
+}
+.stats-data-label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #808080;
+}
+.stats-data-value {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+}
+.stats-icon {
+    margin-right: 16px;
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+}
+
+#pay {
+    z-index: 1;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+}
+#gradient-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -3px;
+    border-radius: 24px;
+    background: linear-gradient(92.12deg, #57b5f9 0%, #da11ba 100%);
+}
+#gradient-box {
+    position: relative;
+    width: 394px;
+    border: solid 3px transparent;
+    border-radius: 24px;
+    margin-top: 42px;
+    margin-bottom: 32px;
+    padding: 24px;
+    box-sizing: border-box;
+    background: white padding-box;
+}
+#top-up {
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 0;
+}
+#money {
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 48px;
+    text-align: center;
+    transition: opacity 0.2s;
+    padding: 20px 0 8px;
+}
+
+#money-input {
+    outline: 0;
+}
+
+.empty {
+    opacity: .4;
+}
+.error {
+    opacity: .5;
+    color: #b30953;
+}
+.hidden {
+    opacity: 0;
+}
+.subtitle {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #808080;
+    text-align: center;
+}
+
+#plus-buttons {
+    display: flex;
+    max-width: 346px;
+    margin: 0 auto auto;
+    width: 100%;
+}
+.plus-button {
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    padding: 0 3px;
+    text-align: center;
+    margin: 0 8px;
+    cursor: pointer;
+    user-select: none;
+    min-height: 40px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.plus-button .title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+#fee {
+    margin-bottom: 16px;
+}
+
+.field {
+    max-width: 306px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    background: transparent;
+    padding: 0 16px;
+    height: 56px;
+}
+
+.field:focus, .field:focus-within {
+    box-shadow: 0 0 0 2px #000;
+}
+
+.field-input {
+    text-transform: none;
+    background: none;
+    text-align: left;
+    border: 0;
+    color: #000;
+    height: 41px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+    border-radius: 0;
+    margin-top: 12px;
+    box-sizing: border-box;
+    padding: 0;
+}
+.field-input:hover, .field-input:focus {
+    outline: none;
+}
+.field-input:hover + label, .field-input:active + label, .field-input.active + label, .field-input:focus + label {
+    font-size: 12px;
+    top: -52px;
+}
+.field-input-label {
+    opacity: .6;
+    cursor: default;
+    text-align: left;
+    color: #757575;
+    font-size: 16px;
+    line-height: 24px;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    -ms-transition: all 0.1s ease;
+    transition: all 0.1s ease;
+    position: relative;
+    top: -38px;
+}
+
+.pay-button {
+    display: flex;
+    cursor: pointer;
+    height: 48px;
+    margin: 0 auto 16px;
+    width: 340px;
+    border-radius: 8px;
+    background: #000;
+    overflow: hidden;
+}
+
+.pay-button:hover {
+    background: #3c4043;
+}
+
+#mono-pay-logo {
+    height: 26px;
+    margin: auto;
+}
+
+#google-pay {
+    padding: 12px 15% 10px;
+    width: 100%;
+    background-image: url(https://www.gstatic.com/instantbuy/svg/dark_gpay.svg);
+    background-color: black;
+    border: 0;
+    border-radius: 0;
+    outline: 1px solid #757575;
+    box-shadow: none;
+    background-origin: content-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+#google-pay:hover {
+    background-color: #3c4043;
+}
+
+#manual-trigger {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 24px;
+    margin-right: 24px;
+    box-sizing: border-box;
+    max-width: 340px;
+    margin-bottom: 42px;
+}
+
+#line {
+    margin-top: 24px;
+    margin-bottom: 8px;
+    border-top: 0.5px solid #ccc;
+}
+
+#card-input {
+    display: flex;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    padding: 8px;
+    cursor: pointer;
+    background: transparent;
+    color: #e85e5b;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background 0.2s;
+    border-radius: 8px;
+}
+
+#card-icon {
+    width: 16px;
+    height: 26px;
+    margin-right: 8px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    z-index: 1;
+    margin-bottom: 16px;
+}
+
+#copyright {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    opacity: .8;
+}
+
+#footer-buttons {
+    display: flex;
+}
+
+.footer-button {
+    display: flex;
+    align-items: center;
+    transition: background 0.2s ease-in-out;
+    user-select: none;
+    cursor: pointer;
+    background: rgba(255,255,255,0.08);
+    border: 0.5px solid rgba(255,255,255,0.4);
+    border-radius: 16px;
+    position: relative;
+    align-self: end;
+    padding: 0 16px;
+    height: 40px;
+    color: #fff;
+    margin-top: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.footer-button:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.footer-button-text {
+    margin-left: 8px;
+}
+
+.footer-button + .footer-button {
+    margin-left: 16px;
+}
+
+.none {
+    display: none !important;
+}
+
+#card-line {
+    display: flex;
+    width: 346px;
+    align-items: center;
+    margin: 24px auto;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.small-line {
+    flex-grow: 1;
+    border-top: 0.5px solid #ccc;
+}
+
+#card-line-text {
+    padding: 0 16px;
+}
+
+.err {
+    text-align: start;
+    font-size: 12px;
+    top: -22px;
+    width: 100%;
+    display: inline-block;
+    height: 18px;
+    line-height: 18px;
+    margin: auto auto -18px;
+    position: relative;
+    color: #ffffff;
+}
+.field.invalid input, .field.invalid span, .subfield.invalid input, .subfield.invalid span {
+    color: #fb5155 !important;
+}
+
+#card-info {
+    display: flex;
+}
+
+.subfield {
+    display: inline-block;
+    width: 90px;
+    margin-right: 16px;
+    min-height: 100px;
+}
+
+.borderLine {
+    width: 1px;
+    background: #767676;
+    opacity: .2;
+    filter: alpha(opacity=20);
+    height: 35px;
+    position: relative;
+    display: inline-block;
+    left: -16px;
+    top: 0;
+    align-self: center;
+}
+
+#pay-button {
+    padding: 0;
+    border: 0;
+    max-width: 346px;
+    width: 100%;
+    margin-bottom: 42px !important;
+}
+
+.field.foreign-fees:empty {
+    display: none;
+}
+
+.field.foreign-fees {
+    background: transparent !important;
+    height: auto !important;
+    border: none !important;
+}
+
+#btn {
+    text-transform: none !important;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    outline: 0;
+    min-height: 100%;
+    position: relative;
+    border-radius: 16px;
+    background: #fb5155;
+    height: 54px;
+    color: #fff;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    display: inline-block;
+    zoom: 1;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    width: 100%;
+}
+#btn[disabled] {
+    border: none;
+    background-image: none;
+    filter: alpha(opacity=40);
+    opacity: .4;
+    cursor: not-allowed;
+    box-shadow: none;
+    pointer-events: none;
+}
+
